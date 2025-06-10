@@ -7,6 +7,18 @@ const PosterizeAnimationCSS = () => {
   const imageWidth = 1920
   const imageHeight = 1080
   const [hoveringArt, setHoveringArt] = useState(false)
+  const [audio] = useState(
+    typeof window !== "undefined"
+      ? new Audio("/audio/your-audio-file.mp3")
+      : null
+  )
+
+  const handlePlay = () => {
+    if (audio) {
+      audio.currentTime = 0
+      audio.play()
+    }
+  }
 
   return (
     <div className="fixed inset-0 w-screen h-screen">
@@ -17,9 +29,16 @@ const PosterizeAnimationCSS = () => {
           alt="Posterize Low"
           width={imageWidth}
           height={imageHeight}
-          className={`object-cover w-full h-full transition-opacity duration-700 ease-in-out ${
-            hoveringArt ? "opacity-0" : "opacity-100"
-          }`}
+          style={{
+            willChange: "opacity",
+            transition: "opacity 0.8s cubic-bezier(0.4,0,0.2,1)",
+            opacity: hoveringArt ? 0 : 1,
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
           priority
         />
         <Image
@@ -27,9 +46,16 @@ const PosterizeAnimationCSS = () => {
           alt="Posterize High"
           width={imageWidth}
           height={imageHeight}
-          className={`object-cover w-full h-full absolute inset-0 transition-opacity duration-700 ease-in-out ${
-            hoveringArt ? "opacity-0" : "opacity-100"
-          }`}
+          style={{
+            willChange: "opacity",
+            transition: "opacity 0.8s cubic-bezier(0.4,0,0.2,1)",
+            opacity: hoveringArt ? 0 : 1,
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
           priority
         />
       </div>
@@ -41,9 +67,16 @@ const PosterizeAnimationCSS = () => {
           alt="Green Colorful"
           width={imageWidth}
           height={imageHeight}
-          className={`object-cover w-full h-full transition-opacity duration-700 ease-in-out ${
-            hoveringArt ? "opacity-100" : "opacity-0"
-          }`}
+          style={{
+            willChange: "opacity",
+            transition: "opacity 0.8s cubic-bezier(0.4,0,0.2,1)",
+            opacity: hoveringArt ? 1 : 0,
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
           priority
         />
       </div>
@@ -55,20 +88,67 @@ const PosterizeAnimationCSS = () => {
           style={{ fontSize: "5vw" }}
         >
           <span
-            className="inline-block pointer-events-auto transition-opacity duration-700 ease-in-out"
+            className="inline-block pointer-events-auto"
             style={{
+              willChange: "opacity",
+              transition: "opacity 0.8s cubic-bezier(0.4,0,0.2,1)",
               opacity: hoveringArt ? 0.2 : 1,
             }}
           >
             ST
           </span>
           <span
-            className="inline-block pointer-events-auto cursor-pointer"
+            className="inline-block pointer-events-auto cursor-pointer relative"
             onMouseEnter={() => setHoveringArt(true)}
             onMouseLeave={() => setHoveringArt(false)}
-            style={{ pointerEvents: "auto" }}
+            style={{
+              pointerEvents: "auto",
+              transition: "color 0.8s cubic-bezier(0.4,0,0.2,1)",
+            }}
           >
             ART.
+            {/* Play button, only visible on hover */}
+            {hoveringArt && (
+              <button
+                onClick={handlePlay}
+                className="pointer-events-auto bg-transparent border-none p-0 m-0 shadow-none play-btn cube-btn"
+                style={{
+                  position: "absolute",
+                  left: "72%",
+                  bottom: "-0.2em",
+                  width: "1em",
+                  height: "1.8em",
+                  fontSize: "1em",
+                  lineHeight: 1,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  opacity: 1,
+                  transition: "transform 0.6s cubic-bezier(0.4,0,0.2,1)",
+                  perspective: "10000px",
+                  background: "none",
+                  scale: 0.2,
+                }}
+                tabIndex={0}
+                aria-label="Play audio"
+                onMouseEnter={e => {
+                  e.currentTarget.classList.add("spin-cube");
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.classList.remove("spin-cube");
+                }}
+              >
+                <div className="cube">
+                  <div className="face front">▶</div>
+                  <div className="face back"></div>
+                  <div className="face right"></div>
+                  <div className="face left"></div>
+                  <div className="face top"></div>
+                  <div className="face bottom"></div>
+                </div>
+              </button>
+            )}
           </span>
         </h1>
       </div>
