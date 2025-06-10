@@ -31,7 +31,7 @@ const PosterizeAnimationCSS = () => {
       </div>
 
       {/* Title Overlay */}
-      <div className="absolute top-[25%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+      <div className="absolute top-[25%] left-1/2 rigt-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
         <h1
           className="font-serif text-title-red font-normal select-none whitespace-nowrap" // Changed text-red-700 to text-title-red
           style={{ fontSize: "5vw" }}
