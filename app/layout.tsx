@@ -14,6 +14,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preload images for smooth animation */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/posterize-low.png"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/posterize-high.png"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/green screen 1.png"
+        />
+      </head>
       <body>{children}</body>
     </html>
   )

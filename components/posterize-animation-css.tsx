@@ -10,34 +10,46 @@ const PosterizeAnimationCSS = () => {
 
   return (
     <div className="fixed inset-0 w-screen h-screen">
-      {/* Base Image (Low Posterization) */}
+      {/* Posterize Images Crossfade */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/posterize-low.png"
-          alt="Fullscreen desert scene with low posterization"
+          alt="Posterize Low"
           width={imageWidth}
           height={imageHeight}
+          className={`object-cover w-full h-full transition-opacity duration-700 ease-in-out ${
+            hoveringArt ? "opacity-0" : "opacity-100"
+          }`}
           priority
-          className="object-cover w-full h-full transition-opacity duration-700 opacity-0"
-          style={{ opacity: 0 }}
+        />
+        <Image
+          src="/images/posterize-high.png"
+          alt="Posterize High"
+          width={imageWidth}
+          height={imageHeight}
+          className={`object-cover w-full h-full absolute inset-0 transition-opacity duration-700 ease-in-out ${
+            hoveringArt ? "opacity-0" : "opacity-100"
+          }`}
+          priority
         />
       </div>
 
-      {/* Overlay Image (High Posterization) - Always visible */}
-      <div className="absolute inset-0 z-0">
+      {/* Green Screen Image Fade In On Hover */}
+      <div className="absolute inset-0 z-10">
         <Image
-          src="/images/posterize-high.png"
-          alt="Fullscreen desert scene with high posterization"
+          src="/images/green screen 1.png"
+          alt="Green Colorful"
           width={imageWidth}
           height={imageHeight}
+          className={`object-cover w-full h-full transition-opacity duration-700 ease-in-out ${
+            hoveringArt ? "opacity-100" : "opacity-0"
+          }`}
           priority
-          className="object-cover w-full h-full transition-opacity duration-700 opacity-100"
-          style={{ opacity: 1 }}
         />
       </div>
 
       {/* Title Overlay */}
-      <div className="absolute top-[25%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none select-none">
+      <div className="absolute top-[25%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none select-none">
         <h1
           className="font-serif text-title-red font-normal whitespace-nowrap"
           style={{ fontSize: "5vw" }}
