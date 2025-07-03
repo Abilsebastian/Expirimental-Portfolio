@@ -1,30 +1,82 @@
-# Photoshop animation request
+# 🌐 Personal Portfolio Website
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Welcome to my personal portfolio website!  
+This site showcases my work as a **Creative Developer**, with a focus on interactive web experiences, 3D visuals, modern UI/UX, and storytelling through code.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/abilsebastians-projects/v0-photoshop-animation-request)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/MJE1dQdw5wr)
+🚀 [Live Site](https://your-username.vercel.app)  
+📁 [Design on Figma (optional)](https://www.figma.com/your-design-link)
 
-## Overview
+---
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## 🛠 Built With
 
-## Deployment
+- **React.js**
+- **Framer Motion** for smooth animations
+- **Tailwind CSS** for modern styling
+- **Spline** for 3D visuals
+- **Vercel** for deployment
 
-Your project is live at:
+---
 
-**[https://vercel.com/abilsebastians-projects/v0-photoshop-animation-request](https://vercel.com/abilsebastians-projects/v0-photoshop-animation-request)**
+## ✨ Features
 
-## Build your app
+- Interactive 3D project cards
+- Scroll-based animations and transitions
+- Animated background powered by Spline
+- Clean, responsive design for all screen sizes
+- Links to GitHub, case studies, and social media
 
-Continue building your app on:
+---
 
-**[https://v0.dev/chat/projects/MJE1dQdw5wr](https://v0.dev/chat/projects/MJE1dQdw5wr)**
+## 📂 Folder Structure (if React)
+/src
+├── assets # Images, icons, etc.
+├── components # Reusable UI components
+├── pages # Main pages (Home, About, Projects)
+├── styles # Global styling files
+└── App.jsx # Main component
 
-## How It Works
+---
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/your-portfolio.git
+cd your-portfolio
+npm install
+npm run dev
+
+🚀 Deployment
+This project is deployed using Vercel.
+
+To deploy:
+
+Push your code to GitHub
+
+Connect the repo to Vercel
+
+Vercel auto-builds and hosts your site on a live URL
+
+📬 Contact
+Feel free to reach out or collaborate!
+
+Instagram: @yourhandle
+
+LinkedIn: yourname
+
+Email: your@email.com
+
+🔒 License
+This project is licensed under the MIT License. Feel free to fork, customize, and share!
+
+--
+
+Let me know if you'd like to:
+- Add project screenshots
+- Embed a video demo
+- Include Figma design link
+- Write a version for a different framework (like Next.js)
+
+Just drop your preferences and I’ll update it!
