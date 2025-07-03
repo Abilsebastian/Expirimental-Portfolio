@@ -3,8 +3,8 @@
 Welcome to my personal portfolio website!  
 This site showcases my work as a **Creative Developer**, with a focus on interactive web experiences, 3D visuals, modern UI/UX, and storytelling through code.
 
-🚀 [Live Site](https://your-username.vercel.app)  
-📁 [Design on Figma (optional)](https://www.figma.com/your-design-link)
+🚀 [Live Site](https://v0-photoshop-animation-request.vercel.app/)  
+
 
 ---
 
@@ -43,7 +43,7 @@ This site showcases my work as a **Creative Developer**, with a focus on interac
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/Abilsebastian/Expirimental-Portfolio.git
 cd your-portfolio
 npm install
 npm run dev
@@ -62,11 +62,11 @@ Vercel auto-builds and hosts your site on a live URL
 📬 Contact
 Feel free to reach out or collaborate!
 
-Instagram: @yourhandle
+Instagram: @sometravelstuffs
 
-LinkedIn: yourname
+LinkedIn: Abil Sebastian
 
-Email: your@email.com
+Email: abilsebastian192@gmail.com
 
 🔒 License
 This project is licensed under the MIT License. Feel free to fork, customize, and share!
