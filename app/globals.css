@@ -4,6 +4,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -180,4 +182,22 @@ h1.glitch {
   60% { text-shadow: -2px 2px rgb(141, 0, 0), 2px -2px rgb(0, 0, 0); }
   80% { text-shadow: 2px 0 rgb(141, 0, 0), -2px 0 rgb(0, 0, 0); }
   100% { text-shadow: none; }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 400ms;
+  background: #000 !important;
+}
+main.fade-out {
+  background: #000 !important;
+}
+
+/* Hide scrollbar for all elements with this class */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Webkit */
 }
